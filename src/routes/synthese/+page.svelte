@@ -60,14 +60,14 @@
     }
 </script>
 
-<main class="p-8 bg-[#1F2937] text-[#F9FAFB]">
-    <h2 class="text-3xl font-bold mb-6">Synthèse des Compétences</h2>
 
-    {#each competences as competence, competenceIndex}
-        <CompetenceCard
-                categorie={competence.categorie}
-                sousCompetences={competence.sousCompetences}
-                valide={competence.valide}
-                toggleValide={() => toggleValide(competenceIndex, 0)} />
-    {/each}
-</main>
+<h2 class="text-3xl font-bold mb-6">Synthèse des Compétences</h2>
+
+{#each competences as competence, competenceIndex}
+    <CompetenceCard
+            categorie={competence.categorie}
+            sousCompetences={competence.sousCompetences}
+            valide={competence.valide}
+            toggleValide={() => toggleValide(competenceIndex, 0)}/>
+{/each}
+

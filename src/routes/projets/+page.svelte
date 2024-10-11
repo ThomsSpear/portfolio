@@ -1,4 +1,7 @@
 <script>
+    import {Button, Card, Heading, P} from "flowbite-svelte";
+    import {ArrowRightOutline} from "flowbite-svelte-icons";
+
     let projets = [
         {
             title: "Projet 1 : Application Web",
@@ -9,18 +12,70 @@
             title: "Projet 2 : Gestion de tâches",
             description: "Une application pour gérer des tâches en utilisant l'API REST.",
             lien: "https://github.com/tonrepo/projet2"
+        },
+        {
+            title: "Projet 2 : Gestion de tâches",
+            description: "Une application pour gérer des tâches en utilisant l'API REST.",
+            lien: "https://github.com/tonrepo/projet2"
+        },
+        {
+            title: "Projet 2 : Gestion de tâches",
+            description: "Une application pour gérer des tâches en utilisant l'API REST.",
+            lien: "https://github.com/tonrepo/projet2"
+        },
+        {
+            title: "Projet 2 : Gestion de tâches",
+            description: "Une application pour gérer des tâches en utilisant l'API REST.",
+            lien: "https://github.com/tonrepo/projet2"
+        }
+        ,        {
+            title: "Projet 2 : Gestion de tâches",
+            description: "Une application pour gérer des tâches en utilisant l'API REST.",
+            lien: "https://github.com/tonrepo/projet2"
+        },
+        {
+            title: "Projet 1 : Application Web",
+            description: "Une application web utilisant SvelteKit pour gérer des données utilisateur.",
+            lien: "https://github.com/tonrepo/projet1"
+        },
+        {
+            title: "Projet 2 : Gestion de tâches",
+            description: "Une application pour gérer des tâches en utilisant l'API REST.",
+            lien: "https://github.com/tonrepo/projet2"
+        },
+        {
+            title: "Projet 2 : Gestion de tâches",
+            description: "Une application pour gérer des tâches en utilisant l'API REST.",
+            lien: "https://github.com/tonrepo/projet2"
+        },
+        {
+            title: "Projet 2 : Gestion de tâches",
+            description: "Une application pour gérer des tâches en utilisant l'API REST.",
+            lien: "https://github.com/tonrepo/projet2"
+        },
+        {
+            title: "Projet 2 : Gestion de tâches",
+            description: "Une application pour gérer des tâches en utilisant l'API REST.",
+            lien: "https://github.com/tonrepo/projet2"
+        }
+        ,        {
+            title: "Projet 2 : Gestion de tâches",
+            description: "Une application pour gérer des tâches en utilisant l'API REST.",
+            lien: "https://github.com/tonrepo/projet2"
         }
     ];
 </script>
 
-<main class="p-8 bg-[#1F2937] text-[#F9FAFB]">
-    <h2 class="text-3xl font-bold mb-6">Mes Projets</h2>
+<h2 class="text-3xl font-bold mb-6">Mes Projets</h2>
 
-    {#each projets as projet}
-        <div class="mb-6 p-4 bg-[#2D3748] rounded-md">
-            <h3 class="text-2xl font-semibold">{projet.title}</h3>
-            <p class="text-gray-400">{projet.description}</p>
-            <a href={projet.lien} target="_blank" class="mt-2 inline-block px-4 py-2 bg-[#3B82F6] text-white rounded-lg hover:bg-blue-600 transition">Voir sur GitHub</a>
-        </div>
-    {/each}
-</main>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+{#each projets as projet}
+    <Card class="flex flex-col h-full">
+        <Heading tag="h5" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{projet.title}</Heading>
+        <P class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">{projet.description}</P>
+        <Button href={projet.lien} class="w-fit">
+            Voir sur Github <ArrowRightOutline class="w-6 h-6 ms-2 text-white" />
+        </Button>
+    </Card>
+{/each}
+</div>
