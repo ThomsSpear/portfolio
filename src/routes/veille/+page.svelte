@@ -1,11 +1,18 @@
-<script>
+<script lang="ts">
     import { Button } from "flowbite-svelte";
     import { ArrowRightOutline } from "flowbite-svelte-icons";
 
-    let searchResults = []; // Les résultats de recherche en ligne
-    let addedLinks = []; // Les liens ajoutés à la liste finale
-    let showResults = false;
+    // Définition des types pour les résultats de recherche et les liens ajoutés
+    type SearchResult = {
+        title: string;
+        url: string;
+    };
 
+    let searchResults: SearchResult[] = []; // Résultats de recherche
+    let addedLinks: SearchResult[] = []; // Liens ajoutés à la liste finale
+    let showResults: boolean = false;
+
+    // Fonction pour récupérer les nouvelles via l'API
     async function searchNews() {
         console.log("Recherche de nouvelles déclenchée");
         try {
@@ -22,7 +29,8 @@
         }
     }
 
-    function addLink(link) {
+    // Fonction pour ajouter un lien à la liste des liens ajoutés
+    function addLink(link: SearchResult) {
         addedLinks.push(link);
         searchResults = searchResults.filter(item => item.url !== link.url);
     }
