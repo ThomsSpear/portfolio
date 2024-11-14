@@ -4,65 +4,20 @@
 
     let projets = [
         {
-            title: "Projet 1 : Application Web",
-            description: "Une application web utilisant SvelteKit pour gérer des données utilisateur.",
-            lien: "https://github.com/tonrepo/projet1"
+            title: "Projet 1 : M2L",
+            description: "Projet de groupe réalisé en centre de formation.",
+            lien: "https://gitlab.com/thomas-boris-matt-o/ap-thomas-boris-matteo"
         },
         {
-            title: "Projet 2 : Gestion de tâches",
-            description: "Une application pour gérer des tâches en utilisant l'API REST.",
-            lien: "https://github.com/tonrepo/projet2"
+            title: "Projet 2 : BioRelais",
+            description: "Réalisation d'un site dynamique.",
+            lien: ""
         },
         {
-            title: "Projet 2 : Gestion de tâches",
-            description: "Une application pour gérer des tâches en utilisant l'API REST.",
-            lien: "https://github.com/tonrepo/projet2"
+            title: "Projet 3 : Plateforme commerciale",
+            description: "Réalisation d'une plateforme commerciale pour l'entreprise.",
+            lien: "/plateforme-commerciale"
         },
-        {
-            title: "Projet 2 : Gestion de tâches",
-            description: "Une application pour gérer des tâches en utilisant l'API REST.",
-            lien: "https://github.com/tonrepo/projet2"
-        },
-        {
-            title: "Projet 2 : Gestion de tâches",
-            description: "Une application pour gérer des tâches en utilisant l'API REST.",
-            lien: "https://github.com/tonrepo/projet2"
-        }
-        ,        {
-            title: "Projet 2 : Gestion de tâches",
-            description: "Une application pour gérer des tâches en utilisant l'API REST.",
-            lien: "https://github.com/tonrepo/projet2"
-        },
-        {
-            title: "Projet 1 : Application Web",
-            description: "Une application web utilisant SvelteKit pour gérer des données utilisateur.",
-            lien: "https://github.com/tonrepo/projet1"
-        },
-        {
-            title: "Projet 2 : Gestion de tâches",
-            description: "Une application pour gérer des tâches en utilisant l'API REST.",
-            lien: "https://github.com/tonrepo/projet2"
-        },
-        {
-            title: "Projet 2 : Gestion de tâches",
-            description: "Une application pour gérer des tâches en utilisant l'API REST.",
-            lien: "https://github.com/tonrepo/projet2"
-        },
-        {
-            title: "Projet 2 : Gestion de tâches",
-            description: "Une application pour gérer des tâches en utilisant l'API REST.",
-            lien: "https://github.com/tonrepo/projet2"
-        },
-        {
-            title: "Projet 2 : Gestion de tâches",
-            description: "Une application pour gérer des tâches en utilisant l'API REST.",
-            lien: "https://github.com/tonrepo/projet2"
-        }
-        ,        {
-            title: "Projet 2 : Gestion de tâches",
-            description: "Une application pour gérer des tâches en utilisant l'API REST.",
-            lien: "https://github.com/tonrepo/projet2"
-        }
     ];
 </script>
 
@@ -74,7 +29,7 @@
         <Heading tag="h5" class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{projet.title}</Heading>
         <P class="mb-3 font-normal text-gray-700 dark:text-gray-400 leading-tight">{projet.description}</P>
         <Button href={projet.lien} class="w-fit">
-            Voir sur Github <ArrowRightOutline class="w-6 h-6 ms-2 text-white" />
+            Voir  <ArrowRightOutline class="w-6 h-6 ms-2 text-white" />
         </Button>
     </Card>
 {/each}
